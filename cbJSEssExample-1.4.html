@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>cbJSEssExample-1.4</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<!-- 
+	Напишите программу расчета объема – V и площади поверхности – S цилиндра.  
+	Объем V цилиндра радиусом – r и высотой – h, вычисляется по формуле: V = πr 2 h. 
+	Площадь S поверхности цилиндра вычисляется по формуле: S = 2π rh + 2π r 2 = 2π r (r+ h). 
+	Результаты расчетов выведите на экран.
+ -->
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function(event) { 
+ 		var r = +prompt('Введите радиус'), h = +prompt('Введите высоту');
+		function calcV(a,b) {
+			var V = Math.PI * Math.pow(a,2) * b;
+			V = parseFloat(V.toFixed(2));
+			return V;
+		}
+
+		function calcS(a,b) {
+			var S = 2*Math.PI*a*(a+b);
+			S = parseFloat(S.toFixed(2));
+			return S;
+		}
+		alert('V = '+calcV(r,h)+'\n'+'S = '+calcS(r,h));
+	});
+</script>
+
+</body>
+</html>
